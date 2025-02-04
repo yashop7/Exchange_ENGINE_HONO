@@ -17,7 +17,6 @@ interface UserBalance {
 export class Engine {
     private orderbooks: Orderbook[] = [];
     private balances: Map<string, UserBalance> = new Map();
-    
     //This is How balances will Look like , we will come on what is locked
     // {
     //     user1: {
@@ -313,6 +312,7 @@ export class Engine {
     }
 
     publishWsTrades(fills: Fill[], userId: string, market: string) {
+        console.log("fills:THIS I AHVE REQUESTED  ", fills);
         fills.forEach(fill => {
             RedisManager.getInstance().publishMessage(`trade.${market}`, {
                 stream: `trade.${market}`,

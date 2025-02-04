@@ -7,8 +7,10 @@
   },
   "dependencies": {
     "@types/redis": "^4.0.11",
+    "dotenv": "^16.4.7",
     "fs": "^0.0.1-security",
     "hono": "^4.6.19",
+    "pusher": "^5.2.0",
     "redis": "^4.7.0",
     "vitest": "^3.0.4"
   },
